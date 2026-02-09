@@ -4,7 +4,7 @@ All notable changes to the Sydney Dance Event Calendar.
 
 ---
 
-## Update VER - 2025-02-09
+## Update VER - 2026-02-09
 
 ### Improved
 - **Enhanced event parsing logic**: Better detection of dance style modifiers
