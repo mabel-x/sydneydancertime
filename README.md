@@ -43,7 +43,6 @@ This eliminates manual entry and keeps the calendar synchronized with the source
 - **Platform**: Blogspot (custom XML template)
 - **Frontend**: Vanilla JavaScript (ES6+), CSS Grid/Flexbox
 - **Data Pipeline**: Google Forms → Google Apps Script → Google Calendar → Apps Script API
-- **Development**: AI-assisted coding with [manus.im](https://manus.im)
 - **No Runtime Dependencies**: Pure JavaScript, no frameworks or libraries
 
 
@@ -73,4 +72,4 @@ For questions or issues, use the [contact form](https://forms.gle/bfdvKiRM1rzccp
 <br>
 <br>
 <br>
-<p align="right"><sub>built with manus by makes, powered with coffee &#9749;&#65039; </sub></p>
+<p align="right"><sub>built with manus by mabes, powered with coffee &#9749;&#65039; </sub></p>
