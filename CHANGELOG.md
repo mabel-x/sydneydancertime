@@ -4,7 +4,7 @@ All notable changes to the Sydney Dance Event Calendar.
 
 ---
 
-## [2.0.0] - 2025-02-09
+## Update VER - 2025-02-09
 
 ### Improved
 - **Enhanced event parsing logic**: Better detection of dance style modifiers
@@ -22,8 +22,7 @@ All notable changes to the Sydney Dance Event Calendar.
 
 ## Credits
 
-**Builder**: Mabel Xian  
-**Assisted Building**: [manus.im](https://manus.im)  
+**Builder**: mabes with [manus.im](https://manus.im)  
 **Community Contributors**: Event submitters via [Google Form](https://forms.gle/ZTrkhMcMasnJ5Veq6)
 
 ---
