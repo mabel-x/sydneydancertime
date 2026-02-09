@@ -9,7 +9,7 @@ A web-based event calendar for Sydney's street dance community, built on Blogspo
 
 ## Overview
 
-This calendar aggregates dance events across Sydney, providing dual-view modes (list and calendar), advanced filtering by event type and dance style, and automatic event categorization from title patterns.
+This calendar aggregates dance events across Sydney, providing dual-view modes (list and calendar), advanced filtering by event type and dance style, and automatic event categorisation from title patterns.
 
 ### Features
 
