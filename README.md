@@ -19,7 +19,7 @@ This calendar aggregates dance events across Sydney, providing dual-view modes (
 - **Automated Submissions**: Google Form submissions auto-populate into Google Calendar via Apps Script
 - **Date Navigation**: Custom date picker with month/year selection
 - **Modal Details**: Click any event for full details and Google Calendar integration
-- **Responsive**: Mobile-optimized layout
+- **Responsive**: Mobile-optimised layout
 
 ---
 
@@ -32,9 +32,9 @@ The calendar uses an automated event management system:
 1. Community members submit events via [Google Form](https://forms.gle/ZTrkhMcMasnJ5Veq6)
 2. Google Apps Script validates and adds approved submissions to Google Calendar
 3. Calendar data is fetched via Apps Script API endpoint
-4. Frontend processes and displays events with automatic categorization
+4. Frontend processes and displays events with automatic categorisation
 
-This eliminates manual entry and keeps the calendar synchronized with the source calendar.
+This eliminates manual entry and keeps the calendar synchronised with the source calendar.
 
 ---
 
