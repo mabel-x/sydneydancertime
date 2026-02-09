@@ -16,7 +16,7 @@ This calendar aggregates dance events across Sydney, providing dual-view modes (
 - **Dual View Modes**: Switch between list and calendar grid layouts
 - **Smart Filtering**: Filter by event type (Battles, Workshops, Jams, etc.) and dance style (Breaking, House, Popping, etc.)
 - **Event Parsing**: Automatically extracts dance styles and event categories from titles
-- **Automated Submissions**: Google Form submissions auto-populate via Apps Script
+- **Automated Submissions**: Google Form submissions auto-populate into Google Calendar via Apps Script
 - **Date Navigation**: Custom date picker with month/year selection
 - **Modal Details**: Click any event for full details and Google Calendar integration
 - **Responsive**: Mobile-optimized layout
