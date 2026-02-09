@@ -50,7 +50,7 @@ This eliminates manual entry and keeps the calendar synchronized with the source
 
 ## Updates
 
-**Latest Version**: 2.0.0 (February 2025)
+**Latest Version**: February 2026
 
 See [CHANGELOG.md](CHANGELOG.md) for complete version history.
 
