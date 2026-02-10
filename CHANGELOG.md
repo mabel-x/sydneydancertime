@@ -1,10 +1,24 @@
 # Changelog
 
-All notable changes to the Sydney Dance Event Calendar.
+Documenting changes to the Sydney Dance Event Calendar.
 
 ---
 
-## Update VER - 2026-02-09
+## Update VER: 2026-02-10
+
+### Changes
+
+- **New communuity links layout**:
+Replaced the list-style with row-based layout and icons
+
+- **Updated links**:
+  - Burn City Street Dance Calendar: linked to Blogspot URL.
+   - Instagram Handles: Added a row of handles (@sydcitywaack, @ballroomaustralia, @ausbreaking, @sydneyhouseheads, @sydneypopping, @qldfreestyleinfo) each linked to their respective Instagram profiles.
+
+<br>
+<br>
+
+## Update VER: 2026-02-09
 
 ### Improved
 - **Enhanced event parsing logic**: Better detection of dance style modifiers
