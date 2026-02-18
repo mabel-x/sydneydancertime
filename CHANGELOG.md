@@ -4,6 +4,25 @@ Documenting changes to the Sydney Dance Event Calendar.
 
 ---
 
+<br>
+<br>
+
+## Update 2026-02-18
+### Changes to script 
+
+- **Flexible Style Matching**:
+Updated the style detection logic to use partial matching instead of exact matching. This ensures that variations like "All styles/Open style" are correctly identified as "All styles" (AS).
+
+- **Multiple Tag Support**:
+Improved the logic to ensure that if multiple styles are mentioned in a single entry (e.g., "All styles/Open style, Experimental"), all corresponding tags (e.g., AS, EXP) are included in the event title.
+
+- **Robust Date & Time Parsing:**
+Implemented a custom Regular Expression parser to reliably handle standalone time strings (e.g., "10:00:00 AM") and strip non-date prefixes like "TBA" or "TBC".
+
+<br>
+<br>
+
+
 ## Update VER: 2026-02-10
 
 ### Changes
