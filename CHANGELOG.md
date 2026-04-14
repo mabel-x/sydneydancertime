@@ -6,7 +6,7 @@ Documenting changes to the Sydney Dance Event Calendar.
 <br>
 <br>
 
-## Update 2026-04-14## 
+## Update 2026-04-14
 
 ### Changes to script
 - **Invalid End Date Guardrail:**:
