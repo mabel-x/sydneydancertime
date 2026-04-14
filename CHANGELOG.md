@@ -9,10 +9,10 @@ Documenting changes to the Sydney Dance Event Calendar.
 ## Update 2026-04-14## 
 
 ### Changes to script
-- ***Invalid End Date Guardrail:**:
+- **Invalid End Date Guardrail:**:
 Updated the Google Apps Script to safely handle cases where the submitted end date is earlier than the event date. Instead of failing to create the event, the script now ignores the invalid end date and creates the event as a single-day entry.
 
--**Improved All-Day Event Handling:**:
+- **Improved All-Day Event Handling:**:
 Adjusted the all-day event creation logic so that only valid end dates are used. This helps prevent incorrect date ranges from blocking event creation in Google Calendar.
 
 - **More Resilient Submission Parsing:**:
