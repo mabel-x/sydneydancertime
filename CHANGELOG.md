@@ -6,6 +6,41 @@ Documenting changes to the Sydney Dance Event Calendar.
 <br>
 <br>
 
+## Update 2026-04-18
+
+### Submission update
+- **Tally popup replaces Google Forms**:
+Updated the site’s event submission links to open the new Tally popup form instead of the previous Google Forms workflow. This applies to the main submission entry points so event submissions now happen through the embedded Tally experience.
+
+### Changes to script
+- **Rebuilt automation for the new Tally-connected sheet**:
+Reworked the Google Apps Script to process submissions from the new Google Sheet populated by Tally. Because Tally writes rows directly into Sheets, the old form-submit trigger was replaced with a time-driven process that checks for new rows every minute.
+
+- **Added row tracking and rebuild support**:
+Added helper columns for `Calendar status`, `Calendar error`, and `Calendar created at` so each submission can be tracked more clearly, plus a `rebuildRow(rowNumber)` utility for reprocessing individual entries when needed.
+
+- **Improved header matching reliability**:
+Updated the script to use normalized header matching so minor spacing differences in the sheet do not break field lookups such as event description and other submission details.
+
+- **Location now carries through to calendar events**:
+Added support for the Tally `Event location` field so submitted locations are included when calendar events are created.
+
+- **Better multi-day event handling**:
+Fixed event creation logic so multi-day events use the submitted end date correctly, including cases where a start time is provided but no end time is entered.
+
+- **Specificity tags now use short codes in titles**:
+Added abbreviation handling for specificity labels so titles stay compact in calendar views. For example, Female, Invitational, Kids, Rookie, Random, and Under 18 now appear as `F`, `I`, `K`, `R`, `RD`, and `U18` in event titles, while the full wording remains in the event details.
+
+### Refined event details
+- **Multi-day end date now shows in the event detail popup**:
+Updated the website popup so multi-day events display the full visible date range in the detail view instead of only the first day.
+
+- **Submission detail flow is clearer**:
+Refined how submitted event details carry through from form submission to calendar output, especially for end date and location fields, so event information is more complete and easier to verify.
+
+<br>
+<br>
+
 ## Update 2026-04-14
 
 ### Changes to script
