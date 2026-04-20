@@ -6,6 +6,41 @@ Documenting changes to the Sydney Dance Event Calendar.
 <br>
 <br>
 
+## Update 2026-04-20
+
+### Submission update
+
+• **Tally submission flow refined and stabilised:**
+Updated the submission workflow around the embedded Tally popup so the main event submission path remains consistent while supporting the newer Tally-connected sheet and downstream calendar automation.
+
+### Changes to script
+
+• **Adjusted the Tally-connected Apps Script to better handle imported sheet values:**
+Refined the Google Apps Script logic used for the Tally-populated Google Sheet so new rows are processed more reliably and event creation remains aligned with the current submission pipeline.
+
+• **Improved date and time handling for calendar event creation:**
+Updated the event creation logic to better control how submitted dates and times are interpreted when creating Google Calendar events, especially where imported values may not behave the same way as direct form inputs.
+
+• **Added safer rebuild and retest support while troubleshooting event creation:**
+Kept the row-based rebuild workflow in place so individual submissions can be reprocessed more easily during fixes, making it faster to verify changes without affecting the entire sheet.
+
+###Refined event details
+
+• ***Safer event description rendering on the website:***
+Updated the event detail popup rendering so pasted content is handled more safely, while still preserving expected formatting such as line breaks and supported links.
+
+• ***Link handling in event descriptions is more controlled: ***
+Refined how description content is displayed so plain text remains plain text, while supported explicit links can still render correctly in the event detail popup.
+
+• ***Continued troubleshooting for Tally-related timezone behaviour: ***
+Investigated the time shift affecting some Tally submissions, where submitted local times appear to be transformed during the integration flow before calendar creation. Further refinement focused on matching the calendar output more closely to the locally displayed values in the sheet.
+
+
+
+
+<br>
+<br>
+
 ## Update 2026-04-18
 
 ### Submission update
@@ -44,13 +79,13 @@ Refined how submitted event details carry through from form submission to calend
 ## Update 2026-04-14
 
 ### Changes to script
-- **Invalid End Date Guardrail:**:
+- **Invalid End Date Guardrail:**
 Updated the Google Apps Script to safely handle cases where the submitted end date is earlier than the event date. Instead of failing to create the event, the script now ignores the invalid end date and creates the event as a single-day entry.
 
-- **Improved All-Day Event Handling:**:
+- **Improved All-Day Event Handling:**
 Adjusted the all-day event creation logic so that only valid end dates are used. This helps prevent incorrect date ranges from blocking event creation in Google Calendar.
 
-- **More Resilient Submission Parsing:**:
+- **More Resilient Submission Parsing:**
 Improved the automation so that minor form input mistakes do not stop otherwise valid event submissions from being processed.
 
 
