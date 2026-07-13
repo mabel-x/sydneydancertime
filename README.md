@@ -41,7 +41,7 @@ Community members can submit events via [this form](https://tally.so/r/b54eQ0).
 
 ## Contact
 
-For questions or issues, use the [contact form] (https://tally.so/r/5Bq20N).
+For questions or issues, use the [contact form](https://tally.so/r/5Bq20N).
 
 
 <br>
