@@ -5,40 +5,32 @@ Documenting changes to the Sydney Dance Event Calendar.
 ---
 <br>
 <br>
+
 ## Update 2026-07-13
 
 ### Performance and display fixes
 
-• **Tally submission flow refined and stabilised:**
-Updated the submission workflow around the embedded Tally popup so the main event submission path remains consistent while supporting the newer Tally-connected sheet and downstream calendar automation.
-
-### Changes to script
-
 • **Adjusted the Tally-connected Apps Script to better handle imported sheet values:**
-Refined the Google Apps Script logic used for the Tally-populated Google Sheet so new rows are processed more reliably and event creation remains aligned with the current submission pipeline.
+- Replaced the plain loading state with a structured skeleton that mirrors the event list layout — each placeholder row shows a date column and text/tag blocks that pulse while data loads. Rows animate with a staggered delay for a more natural feel.
 
-• **Improved date and time handling for calendar event creation:**
-Updated the event creation logic to better control how submitted dates and times are interpreted when creating Google Calendar events, especially where imported values may not behave the same way as direct form inputs.
+• **List view fixes:**
+- Fixed past events incorrectly appearing in the default list view: all-day events (such as multi-day battles) now correctly use their display end date rather than Google Calendar's exclusive end date when filtering.
+- Fixed the upcoming event highlight: the yellow indicator now marks the first event starting today or later, rather than any event that spans today.
 
-• **Added safer rebuild and retest support while troubleshooting event creation:**
-Kept the row-based rebuild workflow in place so individual submissions can be reprocessed more easily during fixes, making it faster to verify changes without affecting the entire sheet.
+• **Performance — localStorage caching:**
+- Added a 30-minute client-side cache so repeat visits render the event list instantly without waiting for the Apps Script response.
+- Stale cache is refreshed silently in the background after expiry, so the page always shows without delay while staying up to date.
 
-###Refined event details
+• **Performance — Tally form cache invalidation:**
+- Added a listener for Tally's form submission event: when anyone submits a new event, the local cache is immediately cleared and a fresh fetch fires after 4 seconds, so the new event appears in the list automatically without a manual reload.
 
-• ***Safer event description rendering on the website:***
-Updated the event detail popup rendering so pasted content is handled more safely, while still preserving expected formatting such as line breaks and supported links.
-
-• ***Link handling in event descriptions is more controlled: ***
-Refined how description content is displayed so plain text remains plain text, while supported explicit links can still render correctly in the event detail popup.
-
-• ***Continued troubleshooting for Tally-related timezone behaviour: ***
-Investigated the time shift affecting some Tally submissions, where submitted local times appear to be transformed during the integration flow before calendar creation. Further refinement focused on matching the calendar output more closely to the locally displayed values in the sheet.
-
-
+• **Performance — load timing:**
+- Switched from window.onload to DOMContentLoaded so the data fetch begins as soon as the page structure is ready, rather than waiting for all images and external assets to finish loading.
 
 
 <br>
 <br>
+
 ## Update 2026-04-20
 
 ### Submission update
