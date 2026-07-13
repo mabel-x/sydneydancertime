@@ -26,7 +26,17 @@ Documenting changes to the Sydney Dance Event Calendar.
 - **Performance — load timing:**
   - Switched from window.onload to DOMContentLoaded so the data fetch begins as soon as the page structure is ready, rather than waiting for all images and external assets to finish loading.
 
+- **Page load performance:**
+  - Added client-side caching so repeat visits render the event list instantly, eliminating the 2–8 second Apps Script cold start that previously occurred on every page load and refresh.
 
+- **Cache invalidation — form submissions:**
+  - Added a listener for Tally's form submission event: when anyone submits a new event via the form, the cache is cleared immediately and a fresh fetch fires within a few seconds, so the new event appears without a manual reload.
+
+- **Cache invalidation — direct Google Calendar additions:**
+  - Added an Apps Script trigger that writes a timestamp to a dedicated sheet cell (AE1) whenever the calendar is updated (events created, edited, or deleted). The site checks this cell on every page load and re-fetches automatically if a change is detected, without needing to fetch the full event list first.
+  - Note: Google Calendar triggers have an inherent delay of 1–5 minutes (occasionally up to 15) before firing. Direct calendar additions will appear on the next page refresh after that delay. Previously, changes appeared immediately on refresh since every load fetched fresh data — this is a deliberate trade-off for the faster load experience.
+Fallback behaviour
+If the sheet check fails for any reason, the cache falls back to a 30-minute TTL to ensure data does not become stale indefinitely. In normal operation this timer is bypassed by the sheet check and does not affect how quickly changes appear.
 <br>
 <br>
 
