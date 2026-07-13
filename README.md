@@ -25,7 +25,7 @@ This calendar aggregates dance events across Sydney, providing dual-view modes (
 
 ## Updates
 
-**Latest Version**: 10 February 2026
+**Latest Version**: 13 July 2026
 
 See [CHANGELOG.md](CHANGELOG.md) for complete version history.
 
@@ -34,14 +34,14 @@ See [CHANGELOG.md](CHANGELOG.md) for complete version history.
 
 ## Event Submission
 
-Community members can submit events via [this form](https://forms.gle/ZTrkhMcMasnJ5Veq6).
+Community members can submit events via [this form](https://tally.so/r/b54eQ0).
 
 
 ---
 
 ## Contact
 
-For questions or issues, use the [contact form](https://forms.gle/bfdvKiRM1rzccpq28).
+For questions or issues, use the [contact form] (https://tally.so/r/5Bq20N).
 
 
 <br>
