@@ -4,7 +4,6 @@ Documenting changes to the Sydney Dance Event Calendar.
 
 ---
 <br>
-<br>
 
 ## Update 2026-07-13
 
