@@ -58,15 +58,15 @@ Updated the event creation logic to better control how submitted dates and times
 • **Added safer rebuild and retest support while troubleshooting event creation:**
 Kept the row-based rebuild workflow in place so individual submissions can be reprocessed more easily during fixes, making it faster to verify changes without affecting the entire sheet.
 
-###Refined event details
+### Refined event details
 
 • ***Safer event description rendering on the website:***
 Updated the event detail popup rendering so pasted content is handled more safely, while still preserving expected formatting such as line breaks and supported links.
 
-• ***Link handling in event descriptions is more controlled: ***
+• ***Link handling in event descriptions is more controlled:***
 Refined how description content is displayed so plain text remains plain text, while supported explicit links can still render correctly in the event detail popup.
 
-• ***Continued troubleshooting for Tally-related timezone behaviour: ***
+• ***Continued troubleshooting for Tally-related timezone behaviour:***
 Investigated the time shift affecting some Tally submissions, where submitted local times appear to be transformed during the integration flow before calendar creation. Further refinement focused on matching the calendar output more closely to the locally displayed values in the sheet.
 
 
