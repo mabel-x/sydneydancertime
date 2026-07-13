@@ -9,7 +9,7 @@ Documenting changes to the Sydney Dance Event Calendar.
 
 ### Performance and display fixes
 
-- **Adjusted the Tally-connected Apps Script to better handle imported sheet values:**
+- **Skeleton loader:**
   - Replaced the plain loading state with a structured skeleton that mirrors the event list layout — each placeholder row shows a date column and text/tag blocks that pulse while data loads. Rows animate with a staggered delay for a more natural feel.
 
 - **List view fixes:**
