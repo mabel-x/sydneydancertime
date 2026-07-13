@@ -10,21 +10,21 @@ Documenting changes to the Sydney Dance Event Calendar.
 ### Performance and display fixes
 
 - **Adjusted the Tally-connected Apps Script to better handle imported sheet values:**
-- Replaced the plain loading state with a structured skeleton that mirrors the event list layout — each placeholder row shows a date column and text/tag blocks that pulse while data loads. Rows animate with a staggered delay for a more natural feel.
+  - Replaced the plain loading state with a structured skeleton that mirrors the event list layout — each placeholder row shows a date column and text/tag blocks that pulse while data loads. Rows animate with a staggered delay for a more natural feel.
 
 - **List view fixes:**
-- Fixed past events incorrectly appearing in the default list view: all-day events (such as multi-day battles) now correctly use their display end date rather than Google Calendar's exclusive end date when filtering.
-- Fixed the upcoming event highlight: the yellow indicator now marks the first event starting today or later, rather than any event that spans today.
+  - Fixed past events incorrectly appearing in the default list view: all-day events (such as multi-day battles) now correctly use their display end date rather than Google Calendar's exclusive end date when filtering.
+  - Fixed the upcoming event highlight: the yellow indicator now marks the first event starting today or later, rather than any event that spans today.
 
 - **Performance — localStorage caching:**
-- Added a 30-minute client-side cache so repeat visits render the event list instantly without waiting for the Apps Script response.
-- Stale cache is refreshed silently in the background after expiry, so the page always shows without delay while staying up to date.
+  - Added a 30-minute client-side cache so repeat visits render the event list instantly without waiting for the Apps Script response
+  - Stale cache is refreshed silently in the background after expiry, so the page always shows without delay while staying up to date.
 
 - **Performance — Tally form cache invalidation:**
-- Added a listener for Tally's form submission event: when anyone submits a new event, the local cache is immediately cleared and a fresh fetch fires after 4 seconds, so the new event appears in the list automatically without a manual reload.
+  - Added a listener for Tally's form submission event: when anyone submits a new event, the local cache is immediately cleared and a fresh fetch fires after 4 seconds, so the new event appears in the list automatically without a manual reload.
 
 - **Performance — load timing:**
-- Switched from window.onload to DOMContentLoaded so the data fetch begins as soon as the page structure is ready, rather than waiting for all images and external assets to finish loading.
+  - Switched from window.onload to DOMContentLoaded so the data fetch begins as soon as the page structure is ready, rather than waiting for all images and external assets to finish loading.
 
 
 <br>
