@@ -5,6 +5,25 @@ Documenting changes to the Sydney Dance Event Calendar.
 ---
 <br>
 
+## Update 2026-08-19
+
+### Key combination parsing fix
+
+**Independent style key handling:**
+
+Fixed event style keys being treated as a single combined label when an event includes both a standalone style code and a more specific version of that same style.
+
+For example, `BB, f.BB` now displays both **Breaking** and **Women Breaking**, rather than showing only **Women Breaking**. Likewise, `k.BB, BB` now displays both **Kids Breaking** and **Breaking**.
+
+**Future key combinations:**
+
+Standalone and compound keys are now processed independently across all event titles. This means any future combination of a base style code and a qualified code—such as kids, women, rookie, under-18, or invitational—will retain every distinct applicable style label.
+
+Exact duplicate labels remain deduplicated, so the same style is not shown more than once.
+
+<br>
+<br>
+
 ## Update 2026-07-13
 
 ### Performance and display fixes
