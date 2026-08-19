@@ -25,7 +25,7 @@ This calendar aggregates dance events across Sydney, providing dual-view modes (
 
 ## Updates
 
-**Latest Version**: 13 July 2026
+**Latest Version**: 19 August 2026
 
 See [CHANGELOG.md](CHANGELOG.md) for complete version history.
 
