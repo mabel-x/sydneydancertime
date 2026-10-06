@@ -5,6 +5,57 @@ Documenting changes to the Sydney Dance Event Calendar.
 ---
 <br>
 
+## Update 2026-10-07
+
+### Location, Maps and event detail update
+
+- **Structured venue details and Google Maps links:**
+  - Added separate venue name, street address, suburb/city, and state/territory fields to the Tally submission flow.
+  - These details are combined into a clearer Maps-ready location when Google Calendar events are created, with Australia added as the default country.
+  - Event locations in the public calendar are now clickable and open a free Google Maps search directly. No Google Maps API key, billing setup, or paid place lookup is required.
+  - TBA/TBC venues remain visible as submitted, without creating a misleading Maps link.
+
+- **Additional venue/date support:**
+  - Added an optional short Tally field for events that move venue or need an additional date/location note.
+  - The primary venue remains the Google Calendar location and the public Maps link.
+  - Additional venue/date information is retained as supporting event information rather than being treated as another Maps destination.
+  - Flexible field matching supports labels including `Additional venue/date`, `Additional venues and dates`, and `Add more venue information`.
+
+### Changes to script
+
+- **Improved Tally submission processing:**
+  - Updated the Apps Script to target the Tally response tab directly rather than relying on whichever Google Sheet tab is currently active.
+  - Rows still being populated by Tally are now marked as `Pending` and retried, rather than being permanently skipped if required values have not finished syncing.
+  - `Calendar status`, `Calendar error`, and `Calendar created at` continue to track each submission clearly.
+
+- **Refined Calendar event descriptions:**
+  - Event metadata is now stored in a compact order: Specificities, Styles, Location, Additional venues/dates, and Link where applicable.
+  - Added a dedicated `Description:` heading before the submitted free-form event description.
+  - Additional venue/date details now stay on the same line as their label where possible.
+  - A visual break separates the metadata block from the event description.
+
+### Refined event details
+
+- **Cleaner event detail popup:**
+  - Metadata labels including **Specificities**, **Styles**, **Location**, **Additional venues / dates**, and **Description** are now bold in the public calendar popup.
+  - Metadata lines are grouped together compactly, while the submitted free-form description is displayed below them.
+  - Older Calendar entries are also reordered in the public popup where possible, so the event description appears after the metadata even if it was originally saved in a different order.
+
+- **Improved location behaviour:**
+  - The full address at the top of the event popup is now the Google Maps link itself.
+  - Removed the separate `Open in Google Maps` button so the modal footer remains focused on `+ Add to Calendar`.
+  - Fixed the date separator in the popup so it displays correctly rather than showing an encoded `&#183;` value.
+
+- **Performance — browser-side calendar caching:**
+  - Updated local browser caching so repeat visitors render saved calendar events immediately instead of waiting for the public Apps Script feed.
+  - Fresh cached data is used for 5 minutes. Cached events can continue to display for up to 24 hours while a newer feed refreshes silently in the background.
+  - Tally submissions no longer clear the visible calendar immediately; the existing list stays available while a background refresh runs.
+  - Removed the failing Sheet-beacon check from the browser loading path and prevented multiple simultaneous full-feed refreshes.
+ 
+
+<br>
+<br>
+
 ## Update 2026-08-19
 
 ### Key combination parsing fix
