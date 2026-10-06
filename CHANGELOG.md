@@ -43,8 +43,6 @@ Documenting changes to the Sydney Dance Event Calendar.
 
 - **Improved location behaviour:**
   - The full address at the top of the event popup is now the Google Maps link itself.
-  - Removed the separate `Open in Google Maps` button so the modal footer remains focused on `+ Add to Calendar`.
-  - Fixed the date separator in the popup so it displays correctly rather than showing an encoded `&#183;` value.
 
 - **Performance — browser-side calendar caching:**
   - Updated local browser caching so repeat visitors render saved calendar events immediately instead of waiting for the public Apps Script feed.
@@ -52,7 +50,6 @@ Documenting changes to the Sydney Dance Event Calendar.
   - Tally submissions no longer clear the visible calendar immediately; the existing list stays available while a background refresh runs.
   - Removed the failing Sheet-beacon check from the browser loading path and prevented multiple simultaneous full-feed refreshes.
  
-
 <br>
 <br>
 
